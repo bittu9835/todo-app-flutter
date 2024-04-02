@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_flutter/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,29 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
-    );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      title: const Text('Home'),
+      home: const HomePage(),
     );
   }
 }
